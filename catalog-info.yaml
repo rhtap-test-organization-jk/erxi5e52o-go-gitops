@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: erxi5e52o-go-gitops
+  description: This is GitOps manifest for erxi5e52o-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: erxi5e52o-go
+    backstage.io/kubernetes-id: erxi5e52o-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: erxi5e52o-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:erxi5e52o-go
